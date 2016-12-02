@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import MovieList from './components/movieList.vue'
+import MovieList from './movieList.vue'
 const num = 10
 const math = Math
 var type = 'in_theaters'

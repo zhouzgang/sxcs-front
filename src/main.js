@@ -1,8 +1,7 @@
 import Vue from 'vue'
 import vueResource from 'vue-resource'
 import VueRouter from 'vue-router'
-// import routeConfig from './route-config'
-// import myFooter from './components/login/my-footer.vue'
+import app from './App.vue'
 import right from './components/rigth.vue'
 Vue.use(vueResource)
 Vue.use(VueRouter)
@@ -20,4 +19,4 @@ const router = new VueRouter({
     ]
 })
 
-new Vue({ router }).$mount('#app')
+const APP = new Vue({ router }).$mount('#app');
