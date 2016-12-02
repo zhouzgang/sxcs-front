@@ -8,7 +8,7 @@
 
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import routeConfig from './router/index'
+import routeConfig from './route-config'
 
 Vue.use(VueRouter)
 
