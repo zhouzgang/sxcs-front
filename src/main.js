@@ -1,22 +1,11 @@
 import Vue from 'vue'
 import vueResource from 'vue-resource'
-import VueRouter from 'vue-router'
-import app from './App.vue'
-import right from './components/rigth.vue'
-Vue.use(vueResource)
-Vue.use(VueRouter)
+import router from './router/index'
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-default/index.css'
+import './assets/styles/body.css'
 
-const router = new VueRouter({
-    routes: [
-        { path: '/',
-            component: app,
-            children: [{
-                name: 'right',
-                path: 'right/:type/:page',
-                component: right
-            }]
-        }
-    ]
-})
+Vue.use(vueResource)
+Vue.use(ElementUI)
 
 const APP = new Vue({ router }).$mount('#app');

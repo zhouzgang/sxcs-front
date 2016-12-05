@@ -6,7 +6,7 @@
         <movie-list  v-bind:movie="movie"></movie-list>
       </a>
   </div>
-  <p>总共：{{total}}条记录，第{{page}}/{{totalPage}}页</p>
+  <p>总共：{{total}}条记录，第{{page}}/{{totalPage}}页aaaaa</p>
   <nav>
     <ul class="pager">
       <li :class="{disabled: page === 1}">

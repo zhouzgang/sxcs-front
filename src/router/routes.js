@@ -1,23 +1,28 @@
 /**
  * Created by 30411 on 2016/11/29.
  */
-// import header from 'components/layout/Navbar.vue'
-// import footer from 'components/layout/Footer.vue'
-//
-// const routes = [
-//     {
-//         path: '/',
-//         components: {
-//             header: header,
-//             footer: footer,
-//             default: resolve => require(['components/layout/Main.vue'], resolve)
-//         },
-//         children: account
-//     },
-//     {
-//         path: '*',
-//         redirect: '/'
-//     }
-// ]
-//
-// export default routes
+import app from '../App.vue'
+import right from '../components/rigth.vue'
+import login from '../components/login/login.vue'
+
+
+const routes =  [
+        { path: '/',
+            component: app,
+            children: [{
+                name: 'right',
+                path: 'right/:type/:page',
+                component: right
+            },{
+                name:'login',
+                path:'/login',
+                component:login
+            }]
+        },
+        {
+            path: '*',
+            redirect: '/'
+        }
+    ]
+
+export default routes
