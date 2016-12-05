@@ -19,8 +19,16 @@
     </el-row>
 
     <el-row>
-      <el-col :span="3"><div class="grid-content bg-purple">fasdfafsfafds</div></el-col>
-      <el-col :span="21"><div class="grid-content bg-purple-light">fasdfsa2werqwe4234</div></el-col>
+      <el-col :span="3">
+        <div class="grid-content bg-purple">
+          <sxcs-left></sxcs-left>
+        </div>
+      </el-col>
+      <el-col :span="21">
+        <div class="grid-content bg-purple-light">
+          <sxcs-content></sxcs-content>
+        </div>
+      </el-col>
     </el-row>
   </div>
 </template>
@@ -29,13 +37,17 @@
 import LeftModule from './components/left.vue'
 import NavModule from './components/nav.vue'
 import SxcsHead from './components/layout/head.vue'
+import SxcsLeft from './components/layout/left.vue'
+import SxcsContent from './components/layout/content.vue'
 
 export default {
   name: 'App',
   components: {
     LeftModule,
     NavModule,
-    SxcsHead
+    SxcsHead,
+    SxcsLeft,
+    SxcsContent
   },
   data () {
     return {

@@ -5,7 +5,6 @@
 </template>
 <style>
     body{
-        background-color:#ff0000;
     }
 </style>
 <script>
@@ -16,8 +15,6 @@
             }
         },
         components:{
-            'other-component':OtherComponent,
-            HeaderComponent,
         }
     }
 </script>
