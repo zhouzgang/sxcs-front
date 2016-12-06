@@ -14,12 +14,11 @@ const router = new VueRouter({
 })
 
 router.beforeEach((to, from, next) => {
-    //判断是否登陆
-    if(localStorage) return next()
-    next({
-        path: '/login',
-        query: {redirect: to.fullPath }
-    })
+
+    if(false){  //是否登陆的判断条件
+        return next({ path: '/login' })
+    }
+    next()
 })
 
 export default router

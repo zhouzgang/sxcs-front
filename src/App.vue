@@ -14,6 +14,7 @@
 
     <el-row>
       <el-col :span="24"><div class="grid-content bg-purple-dark">
+
         <sxcs-head></sxcs-head>
       </div></el-col>
     </el-row>
@@ -34,6 +35,7 @@
 </template>
 
 <script>
+
 import LeftModule from './components/left.vue'
 import NavModule from './components/nav.vue'
 import SxcsHead from './components/layout/head.vue'
