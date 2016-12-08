@@ -1,17 +1,14 @@
 <template>
-    <div>
-        <div>{{ msg }}</div>
-        <ul>
-            <li><router-link to="content">数据展示</router-link></li>
-        </ul>
-        <router-view></router-view>
+    <div class="left">
+        <img src="../../assets/images/snav.jpg" style="width: 100%; height: 42px;">
+        <div>
+            <sxcsNav></sxcsNav>
+        </div>
     </div>
 </template>
-<style>
-    body{
-    }
-</style>
+
 <script>
+    import sxcsNav from "./sxcsNav.vue"
     export default{
         data(){
             return{
@@ -19,6 +16,18 @@
             }
         },
         components:{
+            sxcsNav
         }
     }
 </script>
+
+<style>
+    .left {
+        height: 100%;
+        position:relative;
+        float:left;
+        background:#8b212d url(../../assets/images/left_bg.jpg) no-repeat;
+        overflow:hidden;
+        /*border-right:1px solid #FFF;*/
+    }
+</style>

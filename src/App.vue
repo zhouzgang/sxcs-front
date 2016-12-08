@@ -1,28 +1,25 @@
 <template>
-  <div>
-    <el-row>
+  <el-row style="height: 100%;">
+    <el-row style="height: 5%;" >
       <el-col :span="24"><div class="grid-content bg-purple-dark">
         <router-view name="head"></router-view>
       </div></el-col>
     </el-row>
 
-    <el-row>
-      <el-col :span="3">
-        <div class="grid-content bg-purple">
+    <el-row style="height: 93.7%;" >
+      <el-col :span="2" style="height: 100%">
           <router-view name="left"></router-view>
-        </div>
       </el-col>
-      <el-col :span="21">
+      <el-col :span="22" style="height: 100%" >
         <div class="grid-content bg-purple-light">
           <router-view name="content"></router-view>
         </div>
       </el-col>
     </el-row>
-  </div>
+  </el-row>
 </template>
 
 <script>
-
 
 export default {
   name: 'App',

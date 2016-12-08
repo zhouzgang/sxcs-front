@@ -3,18 +3,22 @@
         <div>{{ msg }}</div>
     </div>
 </template>
-<style>
-    body{
-    }
-</style>
+
 <script>
     export default{
+        name:"menu",
         data(){
             return{
-                msg:'this is nav'
+                msg:'this is menu'
             }
         },
         components:{
         }
     }
 </script>
+
+<style>
+    body{
+
+    }
+</style>
