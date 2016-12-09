@@ -41,12 +41,12 @@
         float:left;
         width:550px;
         height:60px;
-        margin:0 0 0 50px;
+        margin-left: 100px;
     }
     .head-sys-operate {
         float: right;
         margin-right: 100px;
         height: 60px;
-        width: 400px;
+        width: 350px;
     }
 </style>
