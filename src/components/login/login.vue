@@ -26,7 +26,7 @@
       margin: 0 auto 0;
     }
     .index {
-        height: 100%;
+        height: 950px;
         display: flex;
         background-image: url("../../assets/images/login/login_background.jpg");
     }

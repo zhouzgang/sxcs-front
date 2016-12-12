@@ -5,7 +5,8 @@
             <sxcsMenu></sxcsMenu>
         </div>
         <div class="head-sys-operate">
-        <sysOperate></sysOperate>
+            <sysOperate></sysOperate>
+        </div>
     </div>
 </template>
 <script>
@@ -26,27 +27,20 @@
 
 <style>
     .head {
-        width:100%;
-        height:60px;
-        background:#a51717 url(../../assets/images/head_bg.jpg) no-repeat;
     }
     .head-logo {
         float:left;
-        width:300px;
         height:50px;
+        width: 300px;
         margin:5px 0 0 10px;
-        background:url(../../assets/images/logo.png) no-repeat;
+        background:url(../../assets/images/logo.png);
     }
     .head-menu {
-        float:left;
-        width:550px;
-        height:60px;
-        margin-left: 100px;
+        float: left;
+        margin-left: 10%;
     }
     .head-sys-operate {
         float: right;
-        margin-right: 100px;
-        height: 60px;
-        width: 350px;
+        margin-right: 5%;
     }
 </style>

@@ -14,7 +14,7 @@ import menu from '../components/layout/sxcsMenu.vue'
 import login from '../components/login/login.vue'
 import loginFrom from '../components/login/loginFrom.vue'
 import registerFrom from '../components/login/registerFrom.vue'
-import QRcode from '../components/login/QRcode.vue'
+import QRcode from '../components/login/qrcode.vue'
 
 const routes =  [
     {

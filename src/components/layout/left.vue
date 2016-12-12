@@ -23,11 +23,8 @@
 
 <style>
     .left {
-        height: 100%;
-        position:relative;
-        float:left;
-        background:#8b212d url(../../assets/images/left_bg.jpg) no-repeat;
-        overflow:hidden;
-        /*border-right:1px solid #FFF;*/
+        background:url(../../assets/images/left_bg.jpg) no-repeat;
+        background-size: cover;
+        height: 890px;
     }
 </style>

@@ -2,8 +2,8 @@
     <div class="sxcsMenu">
         <ul>
             <li><a href="#">信息管理</a></li>
-            <li><a href="#">menu2</a></li>
-            <li><a href="#"> menu3</a></li>
+            <li><a href="#">监督检查</a></li>
+            <li><a href="#">权限管理</a></li>
         </ul>
     </div>
 </template>
@@ -23,7 +23,6 @@
 <style>
     .sxcsMenu ul {
         margin: 0;
-        padding: 0;
     }
     .sxcsMenu li{
         float: left;

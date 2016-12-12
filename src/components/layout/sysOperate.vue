@@ -1,13 +1,13 @@
 <template>
     <div class="sysOperate">
-        <div class="sysOperate-btn">
-            <a href="javascript:void(0)" @click="dialogUserInfo = true" ><span class="glyphicon glyphicon-user"></span> 个人信息</a>
-            <a href="javascript:void(0)" @click="dialogUpdatePwd = true" ><span class="glyphicon glyphicon-lock"></span> 修改密码</a>
-            <a href="javascript:void(0)" @click="dialogAboutUs = true" ><span class="glyphicon glyphicon-paperclip"></span> 关于我们</a>
-            <a href="#"><span class="glyphicon glyphicon-off"></span> 退出登录</a>
+        <div class="sysOperate-nav">
+            <a class="sysOperate-btn" href="javascript:void(0)" @click="dialogUserInfo = true" ><span class="glyphicon glyphicon-user"></span> 个人信息</a>
+            <a class="sysOperate-btn" href="javascript:void(0)" @click="dialogUpdatePwd = true" ><span class="glyphicon glyphicon-lock"></span> 修改密码</a>
+            <a class="sysOperate-btn" href="javascript:void(0)" @click="dialogAboutUs = true" ><span class="glyphicon glyphicon-paperclip"></span> 关于我们</a>
+            <router-link to="/login" class="sysOperate-btn"><span class="glyphicon glyphicon-off"></span>退出登录</router-link>
         </div>
 
-        <el-dialog title="个人信息" v-model="dialogUserInfo" size="tiny" modal=false class="dialog-user-info">
+        <el-dialog title="个人信息" v-model="dialogUserInfo" size="tiny" class="dialog-user-info">
             <el-form :model="form">
                 <el-form-item label="所属单位" :label-width="formLabelWidth">
                     <el-input v-model="form.name" :disabled="true"></el-input>
@@ -88,12 +88,11 @@
 </script>
 
 <style>
-    .sysOperate-btn {
-        height: 40px;
-        margin: 20px 20px 0 0;
+    .sysOperate-nav {
+        margin-top: 15px;
     }
 
-    .sysOperate-btn a {
+    .sysOperate-btn{
         float: left;
         padding-left: 10px;
         line-height: 40px;
@@ -105,7 +104,7 @@
         -o-transition: background 0.3s;
         transition: background 0.3s;
     }
-    .sysOperate-btn a:hover {
+    .sysOperate-btn:hover {
         background: #8a0c0c;
         text-decoration: none;
     }
