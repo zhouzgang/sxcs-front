@@ -4,19 +4,21 @@
             <header>
                 <span><i class="glyphicon glyphicon-user"></i> 用户登录</span>
             </header>
-            <el-form class="login-form"  ref="form" :model="user" label-width="80px">
+            <el-form class="login-form" :model="account" ref="form" label-width="80px">
                 <el-form-item label="用户名" style="margin-bottom: 0px">
-                    <el-input size="small" v-model="user.name"></el-input>
+                    <el-input size="small" v-model="account.username"></el-input>
                 </el-form-item>
                 <el-form-item label="密码" style="margin-bottom: 0px">
-                    <el-input size="small" type="password" v-model="user.name"></el-input>
+                    <el-input size="small" type="password" v-model="account.password"></el-input>
                 </el-form-item>
                 <el-form-item  label="验证码" style="margin-bottom: 0px">
-                    <el-input class="verify-input" size="small"  v-model="user.name"></el-input>
-                    <img class="verify-img" src="" alt="验证码" height="30px" width="30%">
+                    <el-input class="verify-input" size="small"  v-model="account.checkCode"></el-input>
+                    <img class="verify-img" onClick="this.src='http://localhost:8000/imagecode?' + (+new Date());"
+                         src="http://localhost:8000/imagecode" alt="验证码" height="30px" width="30%">
                 </el-form-item>
                 <el-form-item style="margin-left: -40px; margin-bottom: 0px;">
-                    <router-link to="/" class="to-login">登陆</router-link>
+                    <el-button class="to-login" @click="login">登陆</el-button>
+                    <!--<router-link to="/" class="to-login">登陆</router-link>-->
                     <router-link to="/register" class="to-register">注册账号</router-link>
                     <router-link to="/qrcode" class="to-qrcode">手机APP下载</router-link>
                 </el-form-item>
@@ -26,16 +28,26 @@
 </template>
 
 <script>
+    import {mapActions} from 'vuex'
     export default{
         data(){
             return{
-                user: {
-                    name: '',
-                    passwd: ''
-                }
+                account: { }
             }
         },
-        components:{
+        methods: {
+            login () {
+                this.$message('这是一条消息提示');
+                this.callLogin(this.account)
+                    .then((response) => {
+//                        console.log("login success");/
+                        return "me"
+                    })
+                    .catch(() => {})
+            },
+            ...mapActions({
+                'callLogin': 'login',
+            })
         }
     }
 </script>
