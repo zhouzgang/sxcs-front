@@ -11,11 +11,11 @@ const state = {
 
 const mutations = {
     [types.AUTH_LOGIN_SUCCESS] (state, data) {
-        console.log("aheeeeee")
         state.token = data.token
         localStorage.setItem('token', data.token)
     },
     [types.AUTH_LOGIN_FAIL] (state, err) {
+        console.log("aheeeeee")
         state.token = ''
         localStorage.setItem('token', '')
     }
