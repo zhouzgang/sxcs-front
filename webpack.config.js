@@ -1,5 +1,12 @@
 var path = require('path')
+var config = require('./config/index.js')
 var webpack = require('webpack')
+
+const HtmlWebpackPlugin = require('html-webpack-plugin'); //通过 npm 安装
+
+console.log("加载node 配置");
+// console.log(config.dev.port);
+
 
 module.exports = {
   entry: './src/main.js',
@@ -48,10 +55,13 @@ module.exports = {
     historyApiFallback: true,
     noInfo: true
   },
-  devtool: '#eval-source-map'
+  devtool: '#eval-source-map',
 }
 
-if (process.env.NODE_ENV === 'production') {
+
+
+if (process.env.NODE_ENV === 'development') {
+  console.log("start plugins");
   module.exports.devtool = '#source-map'
   // http://vue-loader.vuejs.org/en/workflow/production.html
   module.exports.plugins = (module.exports.plugins || []).concat([

@@ -5,8 +5,8 @@ import Vue from 'vue'
 import VueResource from 'vue-resource'
 
 //应该是域名？？？？？？
-// const API_ROOT = process.env.API_ROOT
-const API_ROOT = 'http://localhost:8000'
+const API_ROOT = process.env.API_ROOT
+// const API_ROOT = 'http://localhost:8000'
 
 Vue.use(VueResource)
 
